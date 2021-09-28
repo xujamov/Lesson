@@ -40,7 +40,7 @@ object Lesson2 extends App {
   val res2_3 = str2.filterNot(e => e.toLowerCase == e.reverse.toLowerCase).mkString(" ") // write sentence "I want to learn scala and FP"
   val res2_4 = str2.map{ e =>
     if (e.length < 5) "-"
-    else e.zipWithIndex.filter(_._2 != 5).map(_._1).mkString
+    else e.zipWithIndex.filter(_._2 != 4).map(_._1).mkString
   } // write remove from all words 5th element,
   // if 5th element not existed write "-"
   val res2_5 = str2.map(_.replaceAll("a", "^").replaceAll("o", "=")) // write replace "a" -> "^", "o" -> "="
