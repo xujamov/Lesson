@@ -12,6 +12,28 @@ object Lesson3 extends App {
   val kamol = Student("Kamol", 22, List("Frontend"))
   val doniyor = Student("Doniyor", 22, List("Frontend"))
 
+  val studentDirection = akbar match {
+    case Student(_, _, List("Backend")) =>
+      "Backend"
+    case Student("Akbar", _, _) =>
+      "Akbar"
+    case _ =>
+      "Topilmadi "
+  }
+
+  println(s"studentDirection: $studentDirection")
+
+  val studentName = akbar match {
+    case Student("Tohir", _, _) =>
+      "Tohir"
+    case Student("Akbar", _, _) =>
+      "Akbar"
+    case _ =>
+      "Topilmadi "
+  }
+
+  println(s"studentName: $studentName")
+
   val doniyorTuple: (String, Int, List[String]) = (doniyor.name, doniyor.age, doniyor.direction)
   val doniyorTupleAge = doniyorTuple._2
   println(s"doniyorTuple: $doniyorTuple")
