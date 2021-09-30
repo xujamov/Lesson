@@ -34,9 +34,11 @@ object Lesson4 extends App {
     }
 
   def exampleFor2(): Unit =
-    for (i <- 0 until 10) {
+    for (i <- 10 until 1 by -1) {
       println(s"current i: $i")
     }
+
+  exampleFor2()
 
   def exampleFor3(): Unit =
     for (i <- List(1, 2, 3, 4, 5, 6, 6, 8,  9, 10)) {
@@ -132,7 +134,6 @@ object Lesson4 extends App {
     println(result)
   }
 
-  exampleMap()
 
 
 
