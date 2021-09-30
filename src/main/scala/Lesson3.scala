@@ -60,6 +60,29 @@ object Lesson3 extends App {
 
   val t: ((String, Int, List[String])) => Student = (Student.apply _).tupled
 
+  // ===== Home Work Start =====
+  case class Notebook(model: String, price: Int, year: Int, cpu: String)
+
+  val acer1 = Notebook("Acer", 4000000, 2020, "i5")
+  val acer2 = Notebook("Acer", 6000000, 2018, "i3")
+  val hp = Notebook("Hp", 7000000, 2021, "i7")
+  val lenovo = Notebook("Lenovo", 8000000, 2019, "i7")
+  val dell = Notebook("Dell", 12000000, 2021, "i9")
+
+  val allNotebook = List(acer1, acer2, hp, lenovo, dell)
+
+  val res1 = allNotebook.groupBy(_.model).values
+  val res2 = allNotebook.maxBy(_.price).model
+  val res3 = allNotebook.map(_.price).sum
+  val res4 = allNotebook.filter(_.cpu == "i7")
+
+  println(s"Result 1: $res1")
+  println(s"Result 2: $res2")
+  println(s"Result 3: $res3")
+  println(s"Result 4: $res4")
+
+  // ===== End =====
+
 }
 
 //Tohir -> List(Student(Tohir,22,List(Frontend)), Student(Tohir,23,List(Backend))),
