@@ -38,8 +38,6 @@ object Lesson4 extends App {
       println(s"current i: $i")
     }
 
-  exampleFor2()
-
   def exampleFor3(): Unit =
     for (i <- List(1, 2, 3, 4, 5, 6, 6, 8,  9, 10)) {
       println(s"current i: $i")
@@ -134,7 +132,17 @@ object Lesson4 extends App {
     println(result)
   }
 
+ def exampleTask2(): Unit = {
+   val list = List(5, 7, 15, 50, 55, 21, 37)
+   for {
+      (el, index) <- list.zipWithIndex
+      if index < list.length - 1 && (el + list(index + 1)) % 2 == 0
+    } {
+      println(s"i1 = $el | i1 = ${list(index + 1)}")
+    }
+ }
 
+  exampleTask2()
 
 
 }
