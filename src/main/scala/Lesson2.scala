@@ -35,14 +35,11 @@ object Lesson2 extends App {
   //  println(s"res1: $res1\nres2: $res2\nres3: $res3")
 
   val str2 = List("I want", "Ooo", "to learn", "aha", "scala and", "wow", "FP")
-  val res2_1 = str2.map(_.reverse) // write reverse side of words
-  val res2_2 = str2.filter(e => e.toLowerCase == e.reverse.toLowerCase) // write filter only polindrom words
-  val res2_3 = str2.filterNot(e => e.toLowerCase == e.reverse.toLowerCase).mkString(" ") // write sentence "I want to learn scala and FP"
-  val res2_4 = str2.map{ e =>
-    if (e.length < 5) "-"
-    else e.zipWithIndex.filter(_._2 != 4).map(_._1).mkString
-  } // write remove from all words 5th element,
+  val res2_1 = "" // write reverse side of words
+  val res2_2 = "" // write filter only polindrom words
+  val res2_3 = "" // write sentence "I want to learn scala and FP"
+  val res2_4 = "" // write remove from all words 5th element,
   // if 5th element not existed write "-"
-  val res2_5 = str2.map(_.replaceAll("a", "^").replaceAll("o", "=")) // write replace "a" -> "^", "o" -> "="
+  val res2_5 = "" // write replace "a" -> "^", "o" -> "="
   println(s"res2_1: $res2_1\nres2_2: $res2_2\nres2_3: $res2_3\nres2_4: $res2_4\nres2_5: $res2_5")
 }
