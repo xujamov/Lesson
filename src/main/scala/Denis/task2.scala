@@ -37,10 +37,10 @@ object task2 extends App {
   def taskk9(a: String): String = {
     val q = a.toCharArray().toSet.mkString
     val res = for (i <- q.indices) yield {
-        s"${q(i)} - ${q.count(_ == q(i))}"
+        s"${q(i)} - ${a.count(_ == q(i))}"
     }
     res.mkString(", ")
   }
 
-  println(taskk9("333344441111"))
+
 }
