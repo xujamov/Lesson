@@ -11,7 +11,7 @@ object Lesson4Surojddin extends App {
   for (i <- list){
     m += i
   }
-  println(m)
+  println(s"yig'indi: $m")
 
   // toq indeksdagi raqamlarni chiqarish
   for((list, i) <- list.zipWithIndex; if i % 2 != 0) {

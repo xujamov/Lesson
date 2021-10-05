@@ -5,12 +5,12 @@ object Functions extends App {
   def returnValue(a: String): String = {
     (a.toInt * 10).toString
   }
-  val result1 = returnValue(1)
-  val result2 = returnValue(2)
-  val result3 = returnValue(3)
-  println(s"Javob = $result1")
-  println(s"Javob = $result2")
-  println(s"Javob = $result3")
+//  val result1 = returnValue(1)
+//  val result2 = returnValue(2)
+//  val result3 = returnValue(3)
+//  println(s"Javob = $result1")
+//  println(s"Javob = $result2")
+//  println(s"Javob = $result3")
 
 //  1.Task: 1 -> 10, 2 -> 20, 3 -> 30 (Int -> Int)
 //  2.Task: 1 -> 11, 2 -> 21, 3 -> 31 (Int -> Int)
