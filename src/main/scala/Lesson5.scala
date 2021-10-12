@@ -46,4 +46,47 @@ object Lesson5 {
 
   }
 
+  def bigSorting(unsorted: Array[String]): Array[String] = {
+    // Write your code here
+    unsorted.sortWith(sortByLength)
+  }
+
+  def sortByLength(str1: String, str2: String): Boolean = {
+    if(str1.length == str2.length)
+      str1 < str2
+    else str1.length < str2.length
+  }
+
+  def pangrams(s: String): String = {
+    if(s.toLowerCase().toSet.size == 27) "pangram"
+    else "not pangram"
+  }
+
+  // Complete the catAndMouse function below.
+  def catAndMouse(x: Int, y: Int, z: Int): String = {
+    ""
+  }
+
+  def distance(a: Int, b: Int): Int = Math.abs(a - b)
+
+  def caesarCipher(s: String, k: Int): String = {
+    // Write your code here
+    s.map(elem => if(elem.isLetter){
+      val x = (elem.toInt + k).toChar
+      if (elem.isLower && x > 'z') (x.toInt % 26).toChar
+      else x
+    } else elem)
+
+    s.map(letter => {
+      val newLetter = (letter.toInt + k % 26).toChar
+      if(!letter.isLetter) letter
+      else if(letter.isUpper && newLetter > 'Z') (newLetter.toInt - 26).toChar
+      else if(letter.isLower && newLetter > 'z') (newLetter.toInt - 26).toChar
+      else newLetter }
+    )
+  }
+
+  0 ... 25
+  (23 + 6) - 26
+
 }
